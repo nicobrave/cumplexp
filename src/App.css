@@ -1,38 +1,101 @@
+/* client/src/App.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1c1c1e; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #ffeb3b; /* Amarillo */
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  color: #ffeb3b; /* Amarillo */
+  margin-top: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #d1d1d6; /* Gris claro */
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #3a3a3c;
+  border-radius: 5px;
+  background-color: #2c2c2e; /* Gris oscuro */
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: #af52de; /* Morado */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #bf69e4; /* Morado más claro */
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: #6b6b6d; /* Gris para botón deshabilitado */
+  cursor: not-allowed;
+}
+
+a {
+  color: #ffeb3b; /* Amarillo */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #2c2c2e; /* Fondo del formulario */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+footer {
+  margin-top: 50px;
+  color: #8e8e93; /* Gris claro */
+}
+button {
+  background-color: #af52de; /* Morado */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #bf69e4; /* Morado más claro */
+  transform: translateY(-2px); /* Pequeña elevación en hover */
 }
