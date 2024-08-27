@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import '../App.css';
 
 function CompanyRegister() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
-    description: '',
-    address: ''
+    industry: '',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,22 +22,62 @@ function CompanyRegister() {
     try {
       const response = await axios.post('/api/companies/register', formData);
       console.log(response.data);
-      // Redirect or show success message
+
+      if (response.data.token) {
+        localStorage.setItem('token', response.data.token);
+        navigate('/company/dashboard', { replace: true });
+      } else {
+        console.error('No token received');
+      }
     } catch (error) {
       console.error('Error registering company:', error);
-      // Show error message
     }
   };
 
   return (
-    <div>
-      <h2>Company Registration</h2>
+    <div className="App">
+      <h2>Register Your Company</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Company Name" onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-        <textarea name="description" placeholder="Company Description" onChange={handleChange}></textarea>
-        <input type="text" name="address" placeholder="Address" onChange={handleChange} />
+        <label htmlFor="name">Company Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your company name"
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="industry">Industry</label>
+        <input
+          type="text"
+          id="industry"
+          name="industry"
+          placeholder="Enter your industry"
+          onChange={handleChange}
+          required
+        />
+
         <button type="submit">Register</button>
       </form>
     </div>

@@ -1,0 +1,38 @@
+.coupon-card {
+    background-color: #333; /* Ajusta el color de fondo según tu tema */
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .favorite-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .favorite {
+    color: #ffd700; /* Color dorado para favoritos */
+  }
+  
+  .not-favorite {
+    color: #888; /* Color gris para no favoritos */
+  }
+  
+  .view-coupon-button {
+    background-color: #af52de; /* Ajusta según tu paleta de colores */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .view-coupon-button:hover {
+    background-color: #bf69e4;
+  }
+  

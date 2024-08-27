@@ -1,0 +1,58 @@
+.create-coupon-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2c2c2e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-coupon-container h2 {
+    color: #ffeb3b;
+    margin-bottom: 20px;
+  }
+  
+  .create-coupon-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-coupon-container input,
+  .create-coupon-container textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #3a3a3c;
+    border-radius: 5px;
+    background-color: #1c1c1e;
+    color: #fff;
+  }
+  
+  .create-coupon-container .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .create-coupon-container button {
+    background-color: #af52de;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-coupon-container button:hover {
+    background-color: #bf69e4;
+  }
+  
+  .create-coupon-container button:focus {
+    outline: none;
+  }
+  
+  .create-coupon-container button:disabled {
+    background-color: #6b6b6d;
+    cursor: not-allowed;
+  }
+  

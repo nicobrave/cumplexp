@@ -1,0 +1,107 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1c1c1e; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+h2 {
+  color: #ffeb3b; /* Amarillo */
+  margin-bottom: 20px;
+}
+
+.new-coupon-button {
+  background-color: #af52de; /* Morado */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.new-coupon-button:hover {
+  background-color: #bf69e4; /* Morado más claro */
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background-color: #2c2c2e; /* Gris oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.stat-card h3 {
+  color: #ffeb3b; /* Amarillo */
+  margin-bottom: 10px;
+}
+
+.coupon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.coupon-card {
+  background-color: #2c2c2e; /* Gris oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.coupon-card h3 {
+  color: #ffeb3b; /* Amarillo */
+  margin-bottom: 10px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #2c2c2e; /* Gris oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.qr-code {
+  margin-top: 20px;
+  text-align: center;
+}

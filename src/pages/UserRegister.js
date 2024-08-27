@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function UserRegister() {
   const [formData, setFormData] = useState({
@@ -10,6 +11,8 @@ function UserRegister() {
     preferences: ''
   });
 
+  const navigate = useNavigate(); // Hook para redireccionar
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -19,7 +22,8 @@ function UserRegister() {
     try {
       const response = await axios.post('/api/users/register', formData);
       console.log(response.data);
-      // Redirigir al usuario o mostrar mensaje de éxito
+      // Redirigir al login después de un registro exitoso
+      navigate('/user/login');
     } catch (error) {
       console.error('Error registering user:', error);
       // Mostrar mensaje de error

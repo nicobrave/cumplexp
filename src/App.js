@@ -10,6 +10,7 @@ import CompanyRegister from "./pages/CompanyRegister";
 import CompanyLogin from "./pages/CompanyLogin";
 import CompanyDashboard from "./pages/CompanyDashboard";
 import CouponValidation from "./pages/CouponValidation";
+import CreateCoupon from "./pages/CreateCoupon"; 
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/company/register" element={<CompanyRegister />} />
           <Route path="/company/login" element={<CompanyLogin />} />
           <Route path="/company/dashboard" element={<CompanyDashboard />} />
+          <Route path="/company/create-coupon" element={<CreateCoupon />} /> 
           <Route path="/validate" element={<CouponValidation />} />
         </Routes>
         <Footer />
