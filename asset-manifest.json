@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cumplexp/static/css/main.532d8a84.css",
+    "main.js": "/cumplexp/static/js/main.c7ddda20.js",
+    "static/js/453.419a5d54.chunk.js": "/cumplexp/static/js/453.419a5d54.chunk.js",
+    "index.html": "/cumplexp/index.html",
+    "main.532d8a84.css.map": "/cumplexp/static/css/main.532d8a84.css.map",
+    "main.c7ddda20.js.map": "/cumplexp/static/js/main.c7ddda20.js.map",
+    "453.419a5d54.chunk.js.map": "/cumplexp/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.532d8a84.css",
+    "static/js/main.c7ddda20.js"
+  ]
+}
